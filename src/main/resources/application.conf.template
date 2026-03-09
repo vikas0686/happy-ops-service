@@ -1,0 +1,19 @@
+ktor {
+    deployment {
+        port = 8080
+    }
+    application {
+        modules = [ com.happyops.ApplicationKt.module ]
+    }
+}
+
+mongo {
+    uri = "mongodb://localhost:27017"
+    database = "aiorders"
+}
+
+grok {
+    apiKey = ""  # Set your Grok API key here or via GROK_API_KEY env var
+    baseUrl = "https://api.groq.com/openai/v1"
+    model = "llama3-groq-70b-8192-tool-use-preview"
+}
